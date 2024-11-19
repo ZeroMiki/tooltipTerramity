@@ -24,6 +24,8 @@ version:1.1
 
 /*
 changelog
+version:1.1.1 补充超级药丸汉化
+
 version:1.1 添加0.9.6新物品及乐章的翻译，补齐了月钻炮和守护者魔典的翻译。
 
 version:1.0
@@ -2198,6 +2200,17 @@ event.addAdvanced('terramity:pocket_universe',(item,advanced,text)=>{
         text.add(4,[Text.of(" -获得持续5s的").yellow(),Text.of("普适性超验").white()])
         text.add(5,Text.of(" -使你难以辨认，开启飞行并可以穿过墙壁").yellow())
         text.add(6,Text.darkAqua(" -冷却时间：35s"))
+    }
+})
+
+event.addAdvanced('terramity:the_pill',(item,advanced,text)=>{
+    text.add(2,Text.gold("按住 [Shift] 开始思索"))
+    if (event.shift){
+        text.remove(1)
+        text.add(2,Text.blue(""))
+        text.add(3,Text.gold("主动技能："))
+        text.add(4,[Text.of(" -获得持续20s的").yellow(),Text.of("速度II、").white(),Text.of("急迫II、").white(),Text.of("伤害吸收II、").yellow(),Text.of("力量II、").red(),Text.of("生命恢复II、").lightPurple(),Text.of("和").yellow(),Text.of("免疫").white()])
+        text.add(5,Text.darkAqua(" -冷却时间：60s"))
     }
 })
 })
